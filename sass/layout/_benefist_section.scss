@@ -1,0 +1,66 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.benefist-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  //   margin: 0 -30px 0 0;
+  padding: 0px;
+}
+.benefist-list__item {
+  @include tablet {
+    width: calc((100% - 60px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
+  //  width: calc((100% - 90px) / 4);
+  //   margin-right: 30px;
+  max-width: 100%;
+  &::before {
+    display: block;
+    content: "";
+    background-size: 70px 70px;
+    margin-bottom: 30px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f5f4fa;
+  }
+}
+
+.icon-antenna::before {
+  background-image: url(../images/antenna1.svg);
+}
+.icon-time::before {
+  background-image: url(../images/clock1.svg);
+}
+.icon-diagram::before {
+  background-image: url(../images/Vector.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/astronaut1.svg);
+}
+.benefist-list__title {
+  @include font(700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--title-color);
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.benefist-list__text {
+  @include font(400, 14px, 1.71, 0.03em);
+  color: var(--contact-color);
+  margin: 0px;
+}

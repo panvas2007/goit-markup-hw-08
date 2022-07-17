@@ -1,0 +1,36 @@
+.team-list__icon {
+  @include align(flex, center, null);
+  padding: 0px;
+  margin: 0px;
+  margin-top: 16px;
+  list-style: none;
+}
+.team-list__links {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.team-list__links a {
+  @include align(flex, center, center);
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    outline: none;
+  }
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  fill: #afb1b8;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-list__links a svg {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.team-list__links a {
+  &:hover svg,
+  &:focus svg {
+    fill: #ffffff;
+  }
+}

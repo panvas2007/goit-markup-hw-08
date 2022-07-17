@@ -1,0 +1,38 @@
+.items {
+  display: none;
+  //   display: flex;
+  margin-left: auto;
+}
+.items .items__item + .items__item {
+  margin-left: 30px;
+}
+.items__contact {
+  @include align(flex, null, center);
+  color: var(--contact-color);
+  &:hover,
+  &:focus {
+    fill: var(--logo-color);
+  }
+  &:hover svg,
+  &:focus svg {
+    fill: var(--logo-color);
+  }
+}
+
+.items__mail {
+  margin-right: 10px;
+  fill: #757575;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    fill: var(--logo-color);
+  }
+}
+
+.items__phone {
+  margin-right: 10px;
+  fill: #757575;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover {
+    fill: var(--logo-color);
+  }
+}

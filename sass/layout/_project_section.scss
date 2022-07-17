@@ -1,0 +1,19 @@
+.project-title {
+  @include font(700, 18px, 2, 0.06em);
+  color: var(--title-color);
+  margin-top: 0px;
+  margin-bottom: 4px;
+}
+.project {
+  padding: 20px 24px 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+.project-text {
+  @include font(400, 16px, 1.88, 0.03em);
+  color: var(--contact-color);
+  margin: 0px;
+}
+.project-list {
+  background-color: $background-color;
+}
