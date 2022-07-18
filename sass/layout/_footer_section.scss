@@ -37,7 +37,7 @@
   margin-bottom: 20px;
 }
 .footer-icon {
-  //   padding-left: 100px;
+  padding-left: 100px;
 }
 .footer-item {
   display: flex;
@@ -136,7 +136,7 @@
 }
 .footer-input {
   width: 100%;
-  //   width: 358px;
+  width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: rgba(255, 255, 255, 0.6);
@@ -156,4 +156,9 @@
 }
 .footer-desk {
   color: $background-color;
+}
+.footer-contact {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
 }
