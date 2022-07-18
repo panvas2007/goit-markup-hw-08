@@ -25,9 +25,20 @@
   margin: 0px;
 }
 .box {
-  display: flex;
-  flex-wrap: wrap;
-  //   gap: 30px;
+  gap: 30px;
+  text-align: center;
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.footer-soc {
+  @include tablet {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 60px;
+  }
 }
 .footer-text {
   @include font(700, 14px, 1.14, 0.03em);
@@ -37,13 +48,24 @@
   margin-bottom: 20px;
 }
 .footer-icon {
-  padding-left: 100px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  @include tablet {
+    padding: 0;
+    margin-top: -45px;
+  }
+  @include desktop {
+    margin-left: 70px;
+  }
 }
 .footer-item {
   display: flex;
-  padding: 0px;
+  padding-left: 122px;
   margin: 0px;
   list-style: none;
+  @include tablet {
+    padding-left: 0;
+  }
 }
 .footer-item__link a {
   display: flex;
@@ -103,20 +125,31 @@
   margin-right: 0px;
 }
 .footer-form {
-  margin-left: auto;
+  @include tablet {
+    margin: 0px;
+  }
 }
 .footer-email {
-  display: inline-block;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   max-width: 100%;
+  @include tablet {
+    flex-direction: column;
+  }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .text-form {
   @include font(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   color: #fff;
   margin: 0px 0px 20px 0px;
+  @include desktop {
+    text-align: left;
+  }
 }
 .footer-btn {
   @include align(flex, center, center);
@@ -126,7 +159,7 @@
   background: #2196f3;
   border: none;
   border-radius: 4px;
-  margin-left: 12px;
+  margin: 0 auto;
   cursor: pointer;
   &:hover,
   &:focus {
@@ -136,13 +169,20 @@
 }
 .footer-input {
   width: 100%;
-  width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: rgba(255, 255, 255, 0.6);
   background-color: rgba(47, 48, 58, 1);
   border-radius: 4px;
   padding-left: 16px;
+  @include tablet {
+    width: 450px;
+    margin: 0 auto;
+  }
+  @include desktop {
+    width: 358px;
+    margin: 0;
+  }
 }
 .text-btn {
   @include font(700, 16px, 1.88, null);

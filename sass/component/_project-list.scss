@@ -36,8 +36,14 @@
 }
 .project-list__thumb {
   position: absolute;
-  width: 370px;
-  height: 294px;
+  @include mobile {
+    width: 450px;
+    height: 100%;
+  }
+  @include tablet {
+    width: 370px;
+    height: 294px;
+  }
   top: 100%;
   @include align(flex, null, center);
   background-color: rgba(33, 150, 243, 0.9);
