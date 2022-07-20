@@ -19,13 +19,11 @@
 }
 .benefist-list__item {
   @include tablet {
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 30px) / 2);
   }
   @include desktop {
     width: calc((100% - 90px) / 4);
   }
-  //  width: calc((100% - 90px) / 4);
-  //   margin-right: 30px;
   max-width: 100%;
   &::before {
     display: block;

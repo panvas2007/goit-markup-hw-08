@@ -149,10 +149,15 @@
   .checkbox:focus + & {
     border-color: #2196f3;
   }
+  flex-shrink: 0px;
 }
 
 .checkbox__text {
-  @include font(400, 14px, 1.71, 0.03em);
+  @include font(400, 12px, 1.17, 0.03em);
+  @include tablet {
+    @include font(400, 14px, 1.71, 0.03em);
+  }
+
   color: #757575;
 }
 .checkbox-link {

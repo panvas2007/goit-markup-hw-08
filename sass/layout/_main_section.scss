@@ -1,10 +1,18 @@
 .main-list {
   @include align(flex, center, null);
-  padding-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 50px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+  @include tablet {
+    @include align(flex, center, null);
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
+}
 .main-list .main-list__btn {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .main-list__button {

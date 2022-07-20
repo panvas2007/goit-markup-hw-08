@@ -74,8 +74,15 @@ body {
 .header {
   position: relative;
   background-color: #ffffff;
-  padding: 0 px;
+  padding: 0px;
+  padding-bottom: 16px;
+  padding-top: 16px;
   border: 1px solid #ececec;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0px;
+  }
 }
 
 .nav {
@@ -110,7 +117,6 @@ body {
 .header__logo {
   width: 145px;
   height: 31px;
-  margin-right: 93px;
 }
 
 .list {
@@ -187,8 +193,7 @@ body {
 }
 
 .mobile-nav {
-  margin-top: 48px;
-  margin-left: 40px;
+  margin-bottom: 16px;
 }
 
 .mob-menu__list {
@@ -214,7 +219,7 @@ body {
 .mob-items__list {
   list-style: none;
   padding: 0px;
-  margin-left: 40px;
+  margin-top: 0px;
   margin-bottom: 64px;
 }
 
@@ -254,11 +259,10 @@ body {
   list-style: none;
   display: flex;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 1.17;
+  font-size: 18px;
+  line-height: 1.22;
   letter-spacing: 0.02em;
   padding: 0px;
-  margin-left: 40px;
 }
 @media screen and (min-width: 480px) {
   .mob-item {
@@ -319,14 +323,16 @@ body {
 
 .menu-container {
   position: fixed;
+  display: flex;
   display: none;
+  flex-direction: column;
   top: 0;
   width: 100%;
-  height: 600px;
+  height: 100%;
   z-index: 3;
   background-color: #ffffff;
   left: 0;
-  padding: 20px;
+  padding: 48px 40px;
 }
 @media screen and (min-width: 768px) {
   .menu-container {
@@ -335,7 +341,7 @@ body {
 }
 
 .menu-container.is-open {
-  display: block;
+  display: flex;
 }
 
 .header-nav__list,
@@ -468,13 +474,18 @@ body {
 }
 @media screen and (min-width: 480px) {
   .hero__section {
-    padding: 118px 45px;
+    padding: 118px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__section {
+    padding: 200px;
   }
 }
 
 @media screen and (min-width: 480px) {
   .section {
-    padding-bottom: 60px;
+    padding: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -524,9 +535,6 @@ body {
   border-radius: 4px;
   border: 0px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
 }
 @media screen and (min-width: 320px) {
   .hero__button {
@@ -539,7 +547,7 @@ body {
 @media screen and (min-width: 480px) {
   .hero__button {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
   }
@@ -574,7 +582,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .benefist-list__item {
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -717,7 +725,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .team-list__item {
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -870,6 +878,11 @@ img {
 .footer-list__item:not(:last-child) {
   margin-bottom: 9px;
 }
+@media screen and (min-width: 1200px) {
+  .footer-list__item {
+    text-align: left;
+  }
+}
 
 .footer {
   background-color: #2f303a;
@@ -931,8 +944,9 @@ img {
 
 .footer-item {
   display: flex;
-  padding-left: 122px;
+  justify-content: center;
   margin: 0px;
+  padding-left: 0;
   list-style: none;
 }
 @media screen and (min-width: 768px) {
@@ -1105,13 +1119,23 @@ img {
 .main-list {
   display: flex;
   justify-content: center;
-  padding-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 50px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 768px) {
+  .main-list {
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+  }
 }
 
 .main-list .main-list__btn {
   margin-right: 8px;
+  margin-bottom: 15px;
 }
 
 .main-list__button {
@@ -1171,6 +1195,11 @@ img {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 1200px) {
+  .project-list__link {
+    width: 370px;
+  }
+}
 
 .project-list__link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -1187,13 +1216,11 @@ img {
 }
 
 .project-list {
-  margin: 0 -30px -30px 0;
   padding: 0;
 }
 
 .project-list__info {
   width: 100%;
-  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .project-list__info {
@@ -1423,6 +1450,7 @@ img {
   height: 15px;
   border: 2px solid #212121;
   border-radius: 2px;
+  flex-shrink: 0px;
 }
 .checkbox:checked + .checkbox__icon {
   background-color: #2196f3;
@@ -1438,10 +1466,18 @@ img {
 
 .checkbox__text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
+}
+@media screen and (min-width: 768px) {
+  .checkbox__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .checkbox-link {

@@ -15,7 +15,7 @@
 }
 .team-list__item {
   @include tablet {
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 30px) / 2);
   }
   @include desktop {
     width: calc((100% - 90px) / 4);
