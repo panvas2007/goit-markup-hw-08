@@ -63,19 +63,14 @@
   }
   & {
     background-color: #2f303a;
-    padding: 200px 0px;
-  }
-  @include mobile {
-    padding: 118px;
+    padding: 118px 0px;
   }
   @include desktop {
     padding: 200px;
   }
 }
 .section {
-  @include mobile {
-    padding: 60px;
-  }
+  padding: 60px 0;
   @include desktop {
     padding-top: 94px;
     padding-bottom: 94px;

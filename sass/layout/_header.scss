@@ -12,6 +12,14 @@
     padding: 0px;
   }
 }
+.header-cont {
+  display: none;
+}
+.header-cont {
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
 .nav {
   display: none;
   @include tablet {
@@ -141,10 +149,11 @@
   color: rgba(117, 117, 117, 1);
 }
 .mob-items__phone {
-  color: rgba(117, 117, 117, 1);
+  color: #2196f3;
 }
 .mob-items__mail {
   @include font(500, 24px, 1.17, 0.02em);
+  color: #2196f3;
 }
 .mob-item {
   list-style: none;
@@ -160,7 +169,7 @@
   position: relative;
   text-decoration: none;
   margin-right: 20px;
-  color: rgba(117, 117, 117, 1);
+  color: #2196f3;
   &:hover,
   &:focus {
     color: var(--logo-color);
@@ -203,6 +212,7 @@
 .menu-container {
   position: fixed;
   display: flex;
+  justify-content: space-between;
   display: none;
   flex-direction: column;
   top: 0;

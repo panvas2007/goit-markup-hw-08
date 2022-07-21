@@ -2,6 +2,9 @@ body {
   font-family: var(--main-font);
   background-color: $background-color;
   color: var(--title-color);
+  .no-scroll {
+    overflow: hidden;
+  }
 }
 
 .container {
